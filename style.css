@@ -1,0 +1,389 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+#current { 
+    background-color: rgb(4, 103, 4);
+}
+
+.title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 2rem;
+    color: rgb(12, 196, 13);
+    padding: 1rem;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    background-color: #333;
+
+}
+
+.circle {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    background-color: rgb(12, 196, 13);
+    transform: rotate(0);
+    left: -50px;
+    padding: 10px;
+    border: 10px solid #333;
+    transition: left 1s ease-in;
+}
+
+.circle button {
+    width: 50%;
+    height: 100%;
+    border: none;
+    background-color: transparent;
+    color: #fff;
+    font-size: 20px;
+}
+
+.circle.circle_move {
+    transform: rotate(180deg);
+    left: 150px;
+    transition: all 1s ease-in;
+}
+
+.menu {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100vh;
+    background-color: #333;
+    padding: 15px;
+    transform: translateX(-200px);
+    transition: transform 1s ease-in;
+    z-index: 100;
+
+}
+
+.menu.menu_move {
+    transform: translateX(0);
+    transition: transform 1s ease-in;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.5rem;
+    padding: .5rem 1rem;
+    background-color: rgb(12, 196, 13);
+    margin-top: 10px;
+    border-radius: 50px;
+
+}
+
+.container {
+    padding: 3rem 5rem;
+    background-color: rgb(168, 212, 158);
+    width: 100vw;
+}
+
+.article_1 {
+    display: flex;
+}
+
+
+.article_content {
+    width: 50%;
+    padding: 2rem;
+    background-color: #f4f4f4;
+    border-radius: 20px;
+    box-shadow: 10px 10px 40px #333;
+
+}
+
+.article_content:nth-child(2) {
+    margin-left: 20px;
+}
+
+.article_content img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.article_content p {
+    padding: 10px;
+    font-size: 1.5rem;
+    
+}
+
+.article_2 {
+    margin-top: 30px;
+}
+
+.article_2 p {
+    padding: 2rem;
+    background-color: #f4f4f4;
+    border-radius: 20px 20px 0 0;
+    box-shadow: 10px 10px 40px #333;
+    font-size: 1.5rem;
+}
+
+.article_line {
+    width: 100%;
+    height: 10px;
+    background-color: #333;
+    /* border-radius: 10px; */
+    margin-bottom: 20px;
+    animation-name: move;
+    animation-delay: 1s;
+    animation-duration: 3s;
+    animation-timing-function: ease-in;
+    /* animation-iteration-count: infinite;  */
+}
+
+@keyframes move {
+    0% {
+        width: 0;
+        animation-duration: 2s;
+    };
+    50% {
+        width: 50%;
+        animation-duration: 2s;
+    };
+    100% {
+        width: 100%;
+        animation-duration: 2s;
+    }
+}
+
+/* About Page */
+
+#section-a {
+    width: 100%;
+    display: block;
+}
+
+.about-company {
+    width: 100%;
+    padding: 1rem;
+    background-color: #333;
+    border-radius: 10px;
+}
+
+.about-company img {
+    width: 100%;
+    border-radius: 10px;
+    border: 3px solid green;
+}
+
+.about-company p {
+    font-size: 2rem;
+    background-color: #333;
+    color: #fff;
+    margin-top: 10px;
+}
+
+/* Section B  */
+ #section-b {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 20px;
+ }
+
+ .about-article {
+    display: flex;
+    padding: 1rem 2rem;
+    background-color: #333;
+    border-radius: 10px;
+ }
+
+ .article-box {
+    margin: 0 5px;
+    border: 3px dashed green;
+    border-radius: 10px;
+ }
+
+ .about-article img {
+    width: 100%;
+    height: 50%;
+    border-radius: 10px;
+ }
+
+ .article-box p {
+    color: #fff;
+    padding: 5px;
+ }
+
+ /* Contact page */
+
+ .contact {
+    display: flex;
+
+ }
+
+ .contact-content {
+    width: 50%;
+    background-color: #333;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    border: 3px solid #fff;
+
+ }
+
+ .contact-content form label {
+    display: block;
+    color: #fff;
+    padding: 1rem;
+    border: 1px solid #fff;
+    margin: 15px 0;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    font-weight: bold;
+ }
+
+ .contact-content form input {
+    padding: 1rem;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+ }
+
+ .contact-content form input:focus {
+    outline: 3px solid  rgb(21, 140, 231);
+ }
+
+ .contact-content form input::placeholder {
+    font-size: 1rem;
+    color: #333;
+ }
+
+ .contact-content form textarea {
+    width: 100%;
+    height: 100px;
+    border-radius: 5px;
+    font-size: 1rem;
+ }
+
+ .contact-content form textarea:focus {
+    outline: 3px solid  rgb(21, 140, 231);
+ }
+
+ .contact-img {
+    width: 50%;
+    background-color: #333;
+    border: 3px solid #fff;
+    padding: 1rem 2rem ;
+    border-radius: 10px;
+ }
+
+ .contact-img img {
+    width: 100%;
+    border-radius: 5px;
+    margin-top: 5px;
+ }
+
+ .btn-contact {
+    padding: 1rem;
+    width: 100%;
+    margin-top: 10px;
+    background-color: rgb(160, 18, 18);
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer 
+
+ }
+
+ .btn-contact:active {
+    transform: translateY(2px);
+ }
+
+/* Footer section */
+
+#footer {
+    background-color: black;
+    width: 100vw;
+    padding: 1rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+}
+
+.footer-text {
+    padding: 1rem;
+    background-color: #333;
+    width: 50%;
+    color: #fff;
+    border-radius: 10px ;
+}
+
+.footer-social {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.social {
+    padding: 1rem;
+    margin: 10px 0 0 0;
+}
+
+.social a {
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    background-color: #333;
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+.social a:hover {
+    background-color: #555;
+}
+
+.footer-social form {
+    align-items: flex-start;
+    padding: 0 1rem;
+}
+
+.footer-social form input {
+    padding: .7rem;
+    border-radius: 10px 0 0 10px;
+    border: none;
+}
+
+.footer-social form input:focus {
+    outline: 3px groove rgb(21, 140, 231);
+
+}
+
+#btn {
+    padding: .7rem;
+    border-radius: 0 10px 10px 0;
+    background-color: rgb(160, 18, 18);
+    color: #fff;
+    cursor: pointer;
+    border: none;
+}
+
+
+
+
+
+
+
+
+
+
